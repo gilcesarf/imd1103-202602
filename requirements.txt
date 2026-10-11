@@ -19,3 +19,5 @@ tensorflow
 nbconvert[webpdf]
 numpy
 ipykernel
+pandas
+tdqm
