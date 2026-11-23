@@ -1,0 +1,53 @@
+{
+  "experiment": "E01",
+  "algorithm": "reinforce",
+  "environment": "CartPole-v1",
+  "seed": 42,
+  "max_training_steps": 200000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "reinforce_evaluation_mode": "stochastic",
+  "stop_reason": "convergence",
+  "converged": true,
+  "convergence": {
+    "steps": 96822,
+    "episodes": 395,
+    "mean_reward_100": 450.18
+  },
+  "training_steps": 96822,
+  "episodes_completed": 395,
+  "gradient_updates": 98,
+  "training_reward_mean_last_100": 450.18,
+  "training_reward_max": 500.0,
+  "training_elapsed_seconds": 3.196,
+  "evaluation_elapsed_seconds": 0.261,
+  "evaluation": {
+    "episodes": 20,
+    "policy": "stochastic",
+    "seed_base": 100000,
+    "reward_mean": 487.65,
+    "reward_std": 55.2308790442448,
+    "reward_min": 253.0,
+    "reward_max": 500.0,
+    "episode_length_mean": 487.65
+  },
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.5.0",
+    "gymnasium": "0.29.1",
+    "ptan": "unknown",
+    "numpy": "1.26.4"
+  },
+  "reference": "Chapter11/02_cartpole_reinforce.py",
+  "details": {
+    "train_params": {
+      "GAMMA": 0.99,
+      "LEARNING_RATE": 0.01,
+      "EPISODES_TO_TRAIN": 4
+    },
+    "pending_complete_episodes": 3,
+    "pending_partial_episode_samples": 1,
+    "note": "Experiencias pendentes de batch incompleto nao sao treinadas."
+  }
+}

@@ -1,0 +1,5 @@
+checkpoint_id,checkpoint_type,training_steps,episode,seed,reward,steps,terminated,truncated
+periodic_steps5000,periodic,5000,1,404000,-21.0,762,True,False
+periodic_steps5000,periodic,5000,2,404001,-21.0,762,True,False
+final_steps10000,final,10000,1,404000,-20.0,934,True,False
+final_steps10000,final,10000,2,404001,-20.0,934,True,False

@@ -1,0 +1,4 @@
+seed,a2c_final_reward,a3c_final_reward,delta_a3c_minus_a2c,a2c_throughput,a3c_throughput,device_a2c,device_a3c,warning
+42,7.1,-17.6,-24.700000000000003,1342.0923649439032,1548.856355293017,mps,cpu,Device e configuracoes diferem; nao atribuir diferenca apenas ao algoritmo
+123,11.6,-14.8,-26.4,1343.6056463683683,1581.4565571034993,mps,cpu,Device e configuracoes diferem; nao atribuir diferenca apenas ao algoritmo
+2026,14.3,8.9,-5.4,1340.0503805341066,1583.133002874861,mps,cpu,Device e configuracoes diferem; nao atribuir diferenca apenas ao algoritmo

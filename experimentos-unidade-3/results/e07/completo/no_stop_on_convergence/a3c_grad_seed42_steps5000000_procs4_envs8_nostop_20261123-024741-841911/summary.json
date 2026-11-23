@@ -1,0 +1,42 @@
+{
+  "experiment": "E07",
+  "algorithm": "a3c_grad",
+  "seed": 42,
+  "training_steps": 5000232,
+  "gradient_updates": 39061,
+  "gradient_messages": 78126,
+  "episodes_completed": 4234,
+  "converged": false,
+  "first_convergence": null,
+  "first_convergence_steps": null,
+  "train_mean_reward_last100": -16.92,
+  "final_evaluation_reward_mean": -17.6,
+  "final_evaluation_reward_std": 1.8973665961010273,
+  "training_elapsed_seconds_excluding_evaluations": 3228.338110834069,
+  "wrapped_interactions_per_training_second": 1548.856355293017,
+  "checkpoint_and_evaluation_seconds": 122.67319799895631,
+  "device": "cpu",
+  "stop_reason": "step_budget",
+  "worker_stats": {
+    "0": {
+      "gradient_messages": 19541,
+      "environment_interactions": 1250664,
+      "completed_games": 1062
+    },
+    "1": {
+      "gradient_messages": 19509,
+      "environment_interactions": 1248616,
+      "completed_games": 1057
+    },
+    "2": {
+      "gradient_messages": 19535,
+      "environment_interactions": 1250288,
+      "completed_games": 1058
+    },
+    "3": {
+      "gradient_messages": 19541,
+      "environment_interactions": 1250664,
+      "completed_games": 1057
+    }
+  }
+}

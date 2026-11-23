@@ -1,0 +1,217 @@
+{
+  "experimento": "E03",
+  "ambiente": "CartPole-v1",
+  "baseline_do_livro": "media acumulada de retornos n-step; sem critico V(s)",
+  "criterio_selecao": {
+    "max_training_steps": 200000,
+    "stop_on_convergence": false,
+    "evaluation_episodes": 20,
+    "seeds": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "pasta_origem": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/results/e03/completo/no_stop_on_convergence",
+  "pasta_destino": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/analises/e03/steps_200000/no_stop_on_convergence",
+  "limiar_media_movel_100_episodios": 450.0,
+  "execucoes": [
+    {
+      "algoritmo": "pg",
+      "baseline": "none",
+      "semente": 42,
+      "diretorio": "pg_seed42_steps200000_nostop_20261122-180147-692179",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "pg",
+      "baseline": "none",
+      "semente": 123,
+      "diretorio": "pg_seed123_steps200000_nostop_20261122-180220-433434",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "pg",
+      "baseline": "none",
+      "semente": 2026,
+      "diretorio": "pg_seed2026_steps200000_nostop_20261122-180252-167415",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "pg_baseline",
+      "baseline": "running_mean_nstep_returns_including_current_sample",
+      "semente": 42,
+      "diretorio": "pg_baseline_seed42_steps200000_nostop_20261122-180203-859957",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "pg_baseline",
+      "baseline": "running_mean_nstep_returns_including_current_sample",
+      "semente": 123,
+      "diretorio": "pg_baseline_seed123_steps200000_nostop_20261122-180236-055194",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 172256,
+        "episodes": 727,
+        "mean_reward_100": 450.59
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "pg_baseline",
+      "baseline": "running_mean_nstep_returns_including_current_sample",
+      "semente": 2026,
+      "diretorio": "pg_baseline_seed2026_steps200000_nostop_20261122-180307-731490",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "stochastic"
+    }
+  ],
+  "resumo_algoritmos": [
+    {
+      "algoritmo": "PG",
+      "baseline": "nenhum",
+      "quantidade_sementes": 3,
+      "convergencias": 0,
+      "taxa_convergencia": 0.0,
+      "media_recompensa_avaliacao_por_semente": 121.05,
+      "dp_recompensa_avaliacao_entre_sementes": 25.967479662069636,
+      "media_passos_convergencia_apenas_convergidos": "",
+      "media_passos_primeira_convergencia_apenas_convergidos": "",
+      "avaliacoes_ge450_total": 0,
+      "avaliacoes_eq500_total": 0,
+      "episodios_avaliacao_total": 60
+    },
+    {
+      "algoritmo": "PG_BASELINE",
+      "baseline": "media acumulada dos retornos n-step",
+      "quantidade_sementes": 3,
+      "convergencias": 1,
+      "taxa_convergencia": 0.3333333333333333,
+      "media_recompensa_avaliacao_por_semente": 299.21666666666664,
+      "dp_recompensa_avaliacao_entre_sementes": 207.63351327118014,
+      "media_passos_convergencia_apenas_convergidos": 172256,
+      "media_passos_primeira_convergencia_apenas_convergidos": 172256,
+      "avaliacoes_ge450_total": 26,
+      "avaliacoes_eq500_total": 21,
+      "episodios_avaliacao_total": 60
+    }
+  ],
+  "resumo_gradientes": [
+    {
+      "algoritmo": "PG",
+      "semente": 42,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.2282579410160332,
+      "grad_rms_mediana": 0.17854624822610357,
+      "grad_max_maximo": 10.023418426513672,
+      "grad_var_components_media": 0.0845719231144617,
+      "grad_temporal_var_window_media": 0.08490978238788015,
+      "paired_grad_var_ratio_mediana": 0.0015416992721207453,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9354838709677419,
+      "paired_grad_var_no_baseline_media": 0.6780544167790893,
+      "paired_grad_var_with_baseline_media": 0.040527780106752155
+    },
+    {
+      "algoritmo": "PG",
+      "semente": 123,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.24425210248746704,
+      "grad_rms_mediana": 0.1958197446518597,
+      "grad_max_maximo": 7.100203037261963,
+      "grad_var_components_media": 0.09294414004090694,
+      "grad_temporal_var_window_media": 0.09010906137539372,
+      "paired_grad_var_ratio_mediana": 0.0014499932145936863,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9758064516129032,
+      "paired_grad_var_no_baseline_media": 0.7648453815492875,
+      "paired_grad_var_with_baseline_media": 0.05028582766183093
+    },
+    {
+      "algoritmo": "PG",
+      "semente": 2026,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.25390399452661655,
+      "grad_rms_mediana": 0.20109642304161834,
+      "grad_max_maximo": 9.109753608703613,
+      "grad_var_components_media": 0.10153218334068352,
+      "grad_temporal_var_window_media": 0.09860753875175442,
+      "paired_grad_var_ratio_mediana": 0.001336784197660987,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9596774193548387,
+      "paired_grad_var_no_baseline_media": 0.8143002404054882,
+      "paired_grad_var_with_baseline_media": 0.04681397556489609
+    },
+    {
+      "algoritmo": "PG_BASELINE",
+      "semente": 42,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.01798976339270251,
+      "grad_rms_mediana": 0.005900299785551904,
+      "grad_max_maximo": 4.893729209899902,
+      "grad_var_components_media": 0.003274576910110041,
+      "grad_temporal_var_window_media": 0.0030994639586342937,
+      "paired_grad_var_ratio_mediana": 0.0007302086364772346,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9758064516129032,
+      "paired_grad_var_no_baseline_media": 0.6522810099563766,
+      "paired_grad_var_with_baseline_media": 0.017191333636841468
+    },
+    {
+      "algoritmo": "PG_BASELINE",
+      "semente": 123,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.014098154923018478,
+      "grad_rms_mediana": 0.005266704470031157,
+      "grad_max_maximo": 5.019002437591553,
+      "grad_var_components_media": 0.0021458325608635104,
+      "grad_temporal_var_window_media": 0.002072571995716676,
+      "paired_grad_var_ratio_mediana": 0.0006426580559729051,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9758064516129032,
+      "paired_grad_var_no_baseline_media": 0.605419106393543,
+      "paired_grad_var_with_baseline_media": 0.043103806091362794
+    },
+    {
+      "algoritmo": "PG_BASELINE",
+      "semente": 2026,
+      "atualizacoes": 24998,
+      "diagnosticos_pareados": 124,
+      "grad_rms_media": 0.0195937099566126,
+      "grad_rms_mediana": 0.006000139826660622,
+      "grad_max_maximo": 5.425697326660156,
+      "grad_var_components_media": 0.003969172478756913,
+      "grad_temporal_var_window_media": 0.003914557388721779,
+      "paired_grad_var_ratio_mediana": 0.0006668535496541952,
+      "paired_grad_var_ratio_fracao_menor_1": 0.9838709677419355,
+      "paired_grad_var_no_baseline_media": 0.687349316478973,
+      "paired_grad_var_with_baseline_media": 0.01913992591626895
+    }
+  ],
+  "notas": [
+    "Orcamento configurado e modo de parada sao filtrados separadamente.",
+    "A primeira convergencia e um marco, nao uma garantia de estabilidade posterior.",
+    "A media de avaliacao final pode diferir da media movel de treinamento.",
+    "Avaliacao dos checkpoints usa 20 episodios (ou --eval-episodes), com as mesmas sementes em cada checkpoint.",
+    "O desvio padrao dos episodios de avaliacao e amostral (n-1).",
+    "Convergencia e definida pela media dos ultimos 100 episodios de TREINO >= 450.",
+    "Checkpoints intermediarios registram pesos; nao permitem retomada integral do treino.",
+    "Baseline do livro: media acumulada de exp.reward (retornos n-step), incluindo a amostra atual; nao V(s).",
+    "grad_var_components nao estima variancia entre amostras; paired_grad_var compara minibatch fixo, n-step correlacionado."
+  ]
+}

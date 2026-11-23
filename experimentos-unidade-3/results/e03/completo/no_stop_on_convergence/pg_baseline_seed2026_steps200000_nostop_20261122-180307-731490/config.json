@@ -1,0 +1,17 @@
+{
+  "experiment": "E03",
+  "algorithm": "pg_baseline",
+  "environment": "CartPole-v1",
+  "seed": 2026,
+  "max_training_steps": 200000,
+  "stop_on_convergence": false,
+  "evaluation_interval_steps": 50000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "gradient_diagnostic_every_updates": 200,
+  "gradient_temporal_window_updates": 50,
+  "evaluation_seed_base": 100000,
+  "reinforce_evaluation_mode": "stochastic",
+  "baseline": "running_mean_nstep_returns_including_current_sample"
+}

@@ -1,0 +1,31 @@
+{
+  "experiment": "E04",
+  "algorithm": "a2c",
+  "environment": "PongNoFrameskip-v4",
+  "seed": 2026,
+  "max_training_steps": 5000000,
+  "stop_on_convergence": false,
+  "evaluation_interval_steps": 500000,
+  "evaluation_episodes": 10,
+  "evaluation_policy": "stochastic",
+  "evaluation_seed_base": 404000,
+  "evaluation_max_episode_steps": 20000,
+  "num_envs": 50,
+  "vectorization": "sync",
+  "device": "mps",
+  "convergence_window": 100,
+  "convergence_mean_reward_strict_greater_than": 18.0,
+  "gradient_metrics_interval_updates": 10,
+  "reference": "Chapter12/02_pong_a2c.py",
+  "batch_advantage_fix": "squeeze(-1)",
+  "step_definition": "sum of wrapped env.step calls across vector environments",
+  "ale_raw_frames_equal_steps": false,
+  "train_params": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "entropy_beta": 0.01,
+    "batch_size": 128,
+    "reward_steps": 4,
+    "clip_grad": 0.1
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "experiment": "E02",
+  "algorithm": "reinforce",
+  "environment": "CartPole-v1",
+  "seed": 2026,
+  "max_training_steps": 200000,
+  "stop_on_convergence": false,
+  "evaluation_interval_steps": 50000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "evaluation_seed_base": 100000,
+  "reinforce_evaluation_mode": "stochastic",
+  "baseline": "none",
+  "stop_reason": "step_budget",
+  "converged": true,
+  "convergence": {
+    "steps": 104957,
+    "episodes": 527,
+    "mean_reward_100": 450.47
+  },
+  "training_steps": 200000,
+  "episodes_completed": 772,
+  "gradient_updates": 193,
+  "training_reward_mean_last_100": 379.48,
+  "training_reward_max": 500.0,
+  "training_elapsed_seconds": 6.466,
+  "evaluation_elapsed_seconds": 1.065,
+  "checkpoint_evaluations_elapsed_seconds": 1.064,
+  "evaluation": {
+    "episodes": 20,
+    "policy": "stochastic",
+    "seed_base": 100000,
+    "reward_mean": 500.0,
+    "reward_std": 0.0,
+    "reward_min": 500.0,
+    "reward_max": 500.0,
+    "episode_length_mean": 500.0
+  },
+  "checkpoint_evaluations": [
+    {
+      "checkpoint_id": "periodic_steps50000",
+      "checkpoint_type": "periodic",
+      "training_steps": 50000,
+      "gradient_updates": 92,
+      "model_path": "checkpoints/periodic_steps50000.pt",
+      "evaluation_reward_mean": 227.5,
+      "evaluation_reward_std": 67.61384162246195,
+      "evaluation_reward_min": 158.0,
+      "evaluation_reward_max": 410.0
+    },
+    {
+      "checkpoint_id": "periodic_steps100000",
+      "checkpoint_type": "periodic",
+      "training_steps": 100000,
+      "gradient_updates": 128,
+      "model_path": "checkpoints/periodic_steps100000.pt",
+      "evaluation_reward_mean": 437.0,
+      "evaluation_reward_std": 105.23757583877088,
+      "evaluation_reward_min": 151.0,
+      "evaluation_reward_max": 500.0
+    },
+    {
+      "checkpoint_id": "first_convergence_steps104957",
+      "checkpoint_type": "first_convergence",
+      "training_steps": 104957,
+      "gradient_updates": 131,
+      "model_path": "checkpoints/first_convergence_steps104957.pt",
+      "evaluation_reward_mean": 409.0,
+      "evaluation_reward_std": 107.83857331556663,
+      "evaluation_reward_min": 193.0,
+      "evaluation_reward_max": 500.0
+    },
+    {
+      "checkpoint_id": "periodic_steps150000",
+      "checkpoint_type": "periodic",
+      "training_steps": 150000,
+      "gradient_updates": 156,
+      "model_path": "checkpoints/periodic_steps150000.pt",
+      "evaluation_reward_mean": 450.25,
+      "evaluation_reward_std": 82.02751463926441,
+      "evaluation_reward_min": 270.0,
+      "evaluation_reward_max": 500.0
+    },
+    {
+      "checkpoint_id": "final_steps200000",
+      "checkpoint_type": "final",
+      "training_steps": 200000,
+      "gradient_updates": 193,
+      "model_path": "checkpoints/final_steps200000.pt",
+      "evaluation_reward_mean": 500.0,
+      "evaluation_reward_std": 0.0,
+      "evaluation_reward_min": 500.0,
+      "evaluation_reward_max": 500.0
+    }
+  ],
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.5.0",
+    "gymnasium": "0.29.1",
+    "ptan": "unknown",
+    "numpy": "1.26.4"
+  },
+  "reference": "Chapter11/02_cartpole_reinforce.py",
+  "details": {
+    "train_params": {
+      "GAMMA": 0.99,
+      "LEARNING_RATE": 0.01,
+      "EPISODES_TO_TRAIN": 4
+    },
+    "baseline": "none",
+    "pending_complete_episodes": 0,
+    "pending_partial_episode_samples": 23,
+    "note": "Episodios/batches incompletos ao fim do orcamento nao geram atualizacao."
+  }
+}

@@ -1,0 +1,3 @@
+algorithm,n_seeds,convergences,mean_final_evaluation_reward_by_seed,std_final_evaluation_reward_between_seeds,mean_throughput_wrapped_steps_s,mean_training_seconds_excluding_evaluation
+PG,3,0,-20.133333333333333,0.6110100926607784,1538.3,3250.357666666667
+A2C,3,0,11.0,3.637306695894643,1341.9166666666665,3726.0196666666666

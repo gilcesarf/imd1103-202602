@@ -1,0 +1,145 @@
+{
+  "experimento": "E02",
+  "ambiente": "CartPole-v1",
+  "baseline_do_livro": "media dos retornos descontados dentro de cada episodio; sem critico V(s)",
+  "criterio_selecao": {
+    "max_training_steps": 200000,
+    "stop_on_convergence": false,
+    "evaluation_episodes": 20,
+    "seeds": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "pasta_origem": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/results/e02/completo/no_stop_on_convergence",
+  "pasta_destino": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/analises/e02/steps_200000/no_stop_on_convergence",
+  "limiar_media_movel_100_episodios": 450.0,
+  "execucoes": [
+    {
+      "algoritmo": "reinforce",
+      "baseline": "none",
+      "semente": 42,
+      "diretorio": "reinforce_seed42_steps200000_nostop_20261122-174320-818141",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 96822,
+        "episodes": 395,
+        "mean_reward_100": 450.18
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "baseline": "none",
+      "semente": 123,
+      "diretorio": "reinforce_seed123_steps200000_nostop_20261122-174336-131379",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 71128,
+        "episodes": 359,
+        "mean_reward_100": 452.1
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "baseline": "none",
+      "semente": 2026,
+      "diretorio": "reinforce_seed2026_steps200000_nostop_20261122-174351-572767",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 104957,
+        "episodes": 527,
+        "mean_reward_100": 450.47
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce_baseline",
+      "baseline": "mean_discounted_returns_within_each_episode",
+      "semente": 42,
+      "diretorio": "reinforce_baseline_seed42_steps200000_nostop_20261122-174328-395970",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 93844,
+        "episodes": 402,
+        "mean_reward_100": 451.83
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce_baseline",
+      "baseline": "mean_discounted_returns_within_each_episode",
+      "semente": 123,
+      "diretorio": "reinforce_baseline_seed123_steps200000_nostop_20261122-174343-740486",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 148334,
+        "episodes": 515,
+        "mean_reward_100": 452.53
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce_baseline",
+      "baseline": "mean_discounted_returns_within_each_episode",
+      "semente": 2026,
+      "diretorio": "reinforce_baseline_seed2026_steps200000_nostop_20261122-174359-105226",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 116138,
+        "episodes": 389,
+        "mean_reward_100": 450.15
+      },
+      "politica_avaliacao": "stochastic"
+    }
+  ],
+  "resumo_algoritmos": [
+    {
+      "algoritmo": "REINFORCE",
+      "baseline": "nenhum",
+      "quantidade_sementes": 3,
+      "convergencias": 3,
+      "taxa_convergencia": 1.0,
+      "media_recompensa_avaliacao_por_semente": 438.18333333333334,
+      "dp_recompensa_avaliacao_entre_sementes": 107.06960742121609,
+      "media_passos_convergencia_apenas_convergidos": 90969,
+      "media_passos_primeira_convergencia_apenas_convergidos": 90969,
+      "avaliacoes_ge450_total": 40,
+      "avaliacoes_eq500_total": 40,
+      "episodios_avaliacao_total": 60
+    },
+    {
+      "algoritmo": "REINFORCE_BASELINE",
+      "baseline": "media dos retornos descontados por episodio",
+      "quantidade_sementes": 3,
+      "convergencias": 3,
+      "taxa_convergencia": 1.0,
+      "media_recompensa_avaliacao_por_semente": 500.0,
+      "dp_recompensa_avaliacao_entre_sementes": 0.0,
+      "media_passos_convergencia_apenas_convergidos": 119438.66666666667,
+      "media_passos_primeira_convergencia_apenas_convergidos": 119438.66666666667,
+      "avaliacoes_ge450_total": 60,
+      "avaliacoes_eq500_total": 60,
+      "episodios_avaliacao_total": 60
+    }
+  ],
+  "notas": [
+    "Orcamento configurado e modo de parada sao filtrados separadamente.",
+    "A primeira convergencia e um marco, nao uma garantia de estabilidade posterior.",
+    "A media de avaliacao final pode diferir da media movel de treinamento.",
+    "Avaliacao dos checkpoints usa 20 episodios (ou --eval-episodes), com as mesmas sementes em cada checkpoint.",
+    "O desvio padrao dos episodios de avaliacao e amostral (n-1).",
+    "Convergencia e definida pela media dos ultimos 100 episodios de TREINO >= 450.",
+    "Checkpoints intermediarios registram pesos; nao permitem retomada integral do treino.",
+    "Baseline do livro: media de G_t calculada em cada episodio, nao uma estimativa V(s).",
+    "A inferencia sobre reducao da variancia dos gradientes exige medicoes diretas (E03)."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "experimento": "E01",
+  "ambiente": "CartPole-v1",
+  "criterio_selecao": {
+    "max_training_steps": 200000,
+    "stop_on_convergence": false,
+    "evaluation_episodes": 20,
+    "seeds": [
+      42,
+      123,
+      2026
+    ]
+  },
+  "pasta_origem": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/results/e01/completo/no_stop_on_convergence",
+  "pasta_destino": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/analises/e01/steps_200000/no_stop_on_convergence",
+  "limiar_media_movel_100_episodios": 450.0,
+  "execucoes": [
+    {
+      "algoritmo": "dqn",
+      "semente": 42,
+      "diretorio": "dqn_seed42_steps200000_nostop_20261122-171231-190861",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "dqn",
+      "semente": 123,
+      "diretorio": "dqn_seed123_steps200000_nostop_20261122-171349-242977",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 52780,
+        "episodes": 234,
+        "mean_reward_100": 451.05
+      },
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "dqn",
+      "semente": 2026,
+      "diretorio": "dqn_seed2026_steps200000_nostop_20261122-171504-214328",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": false,
+      "primeira_convergencia": null,
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 42,
+      "diretorio": "reinforce_seed42_steps200000_nostop_20261122-171341-153288",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 96822,
+        "episodes": 395,
+        "mean_reward_100": 450.18
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 123,
+      "diretorio": "reinforce_seed123_steps200000_nostop_20261122-171456-663896",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 71128,
+        "episodes": 359,
+        "mean_reward_100": 452.1
+      },
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 2026,
+      "diretorio": "reinforce_seed2026_steps200000_nostop_20261122-171609-812122",
+      "passos_executados": 200000,
+      "convergiu_alguma_vez": true,
+      "primeira_convergencia": {
+        "steps": 104957,
+        "episodes": 527,
+        "mean_reward_100": 450.47
+      },
+      "politica_avaliacao": "stochastic"
+    }
+  ],
+  "resumo_algoritmos": [
+    {
+      "algoritmo": "DQN",
+      "quantidade_sementes": 3,
+      "convergencias": 1,
+      "taxa_convergencia": 0.3333333333333333,
+      "media_recompensa_avaliacao_por_semente": 337.7166666666667,
+      "dp_recompensa_avaliacao_entre_sementes": 73.50619588397521,
+      "media_passos_convergencia_apenas_convergidos": 52780,
+      "media_passos_primeira_convergencia_apenas_convergidos": 52780,
+      "avaliacoes_ge450_total": 14,
+      "avaliacoes_eq500_total": 6,
+      "episodios_avaliacao_total": 60
+    },
+    {
+      "algoritmo": "REINFORCE",
+      "quantidade_sementes": 3,
+      "convergencias": 3,
+      "taxa_convergencia": 1.0,
+      "media_recompensa_avaliacao_por_semente": 438.18333333333334,
+      "dp_recompensa_avaliacao_entre_sementes": 107.06960742121609,
+      "media_passos_convergencia_apenas_convergidos": 90969,
+      "media_passos_primeira_convergencia_apenas_convergidos": 90969,
+      "avaliacoes_ge450_total": 40,
+      "avaliacoes_eq500_total": 40,
+      "episodios_avaliacao_total": 60
+    }
+  ],
+  "notas": [
+    "Orcamento configurado e modo de parada sao filtrados separadamente.",
+    "A primeira convergencia e um marco, nao uma garantia de estabilidade posterior.",
+    "A media de avaliacao final pode diferir da media movel de treinamento.",
+    "Avaliacao dos checkpoints usa 20 episodios (ou --eval-episodes), com as mesmas sementes em cada checkpoint.",
+    "O desvio padrao dos episodios de avaliacao e amostral (n-1).",
+    "Convergencia e definida pela media dos ultimos 100 episodios de TREINO >= 450.",
+    "Checkpoints intermediarios registram pesos; nao permitem retomada integral do treino."
+  ]
+}

@@ -1,0 +1,6 @@
+checkpoint_id,checkpoint_type,training_steps,gradient_updates,model_path,evaluation_reward_mean,evaluation_reward_std,evaluation_reward_min,evaluation_reward_max
+periodic_steps50000,periodic,50000,72,checkpoints/periodic_steps50000.pt,294.85,58.491812292517984,170.0,420.0
+first_convergence_steps96822,first_convergence,96822,98,checkpoints/first_convergence_steps96822.pt,487.65,55.2308790442448,253.0,500.0
+periodic_steps100000,periodic,100000,100,checkpoints/periodic_steps100000.pt,460.25,78.2067940244257,264.0,500.0
+periodic_steps150000,periodic,150000,126,checkpoints/periodic_steps150000.pt,489.6,43.327880898538,306.0,500.0
+final_steps200000,final,200000,158,checkpoints/final_steps200000.pt,314.55,58.67616300733338,217.0,395.0

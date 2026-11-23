@@ -1,0 +1,32 @@
+{
+  "experiment": "E05",
+  "algorithm": "pg",
+  "environment": "PongNoFrameskip-v4",
+  "seed": 42,
+  "max_training_steps": 5000000,
+  "stop_on_convergence": false,
+  "evaluation_interval_steps": 500000,
+  "evaluation_episodes": 10,
+  "evaluation_policy": "stochastic",
+  "evaluation_seed_base": 404000,
+  "evaluation_max_episode_steps": 20000,
+  "num_envs": 32,
+  "vectorization": "ptan_list_of_envs",
+  "device": "mps",
+  "convergence_window": 100,
+  "convergence_mean_reward_strict_greater_than": 18.0,
+  "reference": "Chapter11/05_pong_pg.py",
+  "train_params": {
+    "gamma": 0.99,
+    "learning_rate": 0.00010792,
+    "entropy_beta": 0.00010649,
+    "batch_size": 128,
+    "reward_steps": 9,
+    "baseline_steps": 1000000,
+    "grad_l2_clip": 0.39215,
+    "env_count": 32
+  },
+  "step_definition": "sum of wrapped env.step calls across list of environments",
+  "ale_raw_frames_equal_steps": false,
+  "gradient_metrics_interval_updates": 10
+}

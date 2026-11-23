@@ -1,0 +1,95 @@
+{
+  "experiment": "E04",
+  "environment": "PongNoFrameskip-v4",
+  "criteria": {
+    "max_training_steps": 5000000,
+    "stop_on_convergence": false,
+    "evaluation_episodes": 10,
+    "seeds_selected": [
+      42,
+      123,
+      2026
+    ],
+    "num_envs": 50
+  },
+  "runs": [
+    {
+      "algorithm": "A2C",
+      "seed": 42,
+      "training_steps": 5000000,
+      "vector_steps": 100000,
+      "gradient_updates": 39060,
+      "episodes_completed": 3621,
+      "converged": false,
+      "first_convergence_steps": "",
+      "first_convergence_episodes": "",
+      "train_mean_reward_last100": 8.2,
+      "final_evaluation_reward_mean": 7.1,
+      "final_evaluation_reward_std": 11.27879032126722,
+      "training_elapsed_seconds_excluding_evaluations": 3725.526,
+      "wrapped_interactions_per_training_second": 1342.09,
+      "num_envs": 50,
+      "device": "mps",
+      "directory": "a2c_seed42_steps5000000_envs50_nostop_20261122-183427-670177"
+    },
+    {
+      "algorithm": "A2C",
+      "seed": 123,
+      "training_steps": 5000000,
+      "vector_steps": 100000,
+      "gradient_updates": 39060,
+      "episodes_completed": 3595,
+      "converged": false,
+      "first_convergence_steps": "",
+      "first_convergence_episodes": "",
+      "train_mean_reward_last100": 14.37,
+      "final_evaluation_reward_mean": 11.6,
+      "final_evaluation_reward_std": 10.437113266288401,
+      "training_elapsed_seconds_excluding_evaluations": 3721.33,
+      "wrapped_interactions_per_training_second": 1343.61,
+      "num_envs": 50,
+      "device": "mps",
+      "directory": "a2c_seed123_steps5000000_envs50_nostop_20261122-194542-811956"
+    },
+    {
+      "algorithm": "A2C",
+      "seed": 2026,
+      "training_steps": 5000000,
+      "vector_steps": 100000,
+      "gradient_updates": 39060,
+      "episodes_completed": 3799,
+      "converged": false,
+      "first_convergence_steps": "",
+      "first_convergence_episodes": "",
+      "train_mean_reward_last100": 11.82,
+      "final_evaluation_reward_mean": 14.3,
+      "final_evaluation_reward_std": 5.078276172963508,
+      "training_elapsed_seconds_excluding_evaluations": 3731.203,
+      "wrapped_interactions_per_training_second": 1340.05,
+      "num_envs": 50,
+      "device": "mps",
+      "directory": "a2c_seed2026_steps5000000_envs50_nostop_20261122-205023-184395"
+    }
+  ],
+  "summary_algorithms": [
+    {
+      "algorithm": "A2C",
+      "n_seeds": 3,
+      "convergences": 0,
+      "convergence_rate": 0.0,
+      "mean_training_steps_to_first_convergence_when_converged": null,
+      "mean_final_evaluation_reward_by_seed": 11.0,
+      "std_final_evaluation_reward_between_seeds": 3.637306695894643,
+      "mean_throughput_wrapped_steps_s": 1341.9166666666665
+    }
+  ],
+  "notes": [
+    "Passos de treino = soma de env.step dos subambientes (com wrappers).",
+    "Quadros ALE nao sao equivalentes aos passos de treino: wrappers usam frameskip.",
+    "Convergencia: media de 100 jogos completos > +18; nao confundir com avaliacao.",
+    "A avaliacao usa politica estocastica com seeds independentes do treino.",
+    "Gradiente registra a variancia ENTRE coordenadas (nao entre amostras independentes).",
+    "O exemplo original foi corrigido apenas no broadcasting da vantagem.",
+    "A2C com ambientes SyncVectorEnv: nao constitui A3C nem gradientes assincronos."
+  ]
+}

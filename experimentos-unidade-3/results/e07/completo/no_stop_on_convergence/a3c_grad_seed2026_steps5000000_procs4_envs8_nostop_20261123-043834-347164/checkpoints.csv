@@ -1,0 +1,11 @@
+checkpoint_id,checkpoint_type,training_steps,gradient_updates,model_path,evaluation_reward_mean,evaluation_reward_std,evaluation_reward_min,evaluation_reward_max
+periodic_steps500032,periodic,500032,3905,checkpoints/periodic_steps500032.pt,-20.1,1.1005049346146119,-21.0,-18.0
+periodic_steps1000000,periodic,1000000,7811,checkpoints/periodic_steps1000000.pt,-20.4,0.6992058987801011,-21.0,-19.0
+periodic_steps1500032,periodic,1500032,11718,checkpoints/periodic_steps1500032.pt,-20.2,0.7888106377466155,-21.0,-19.0
+periodic_steps2000000,periodic,2000000,15624,checkpoints/periodic_steps2000000.pt,-20.3,0.674948557710553,-21.0,-19.0
+periodic_steps2500032,periodic,2500032,19530,checkpoints/periodic_steps2500032.pt,-19.0,0.816496580927726,-20.0,-18.0
+periodic_steps3000000,periodic,3000000,23436,checkpoints/periodic_steps3000000.pt,-19.2,1.5491933384829668,-21.0,-16.0
+periodic_steps3500032,periodic,3500032,27343,checkpoints/periodic_steps3500032.pt,-19.2,1.1352924243950933,-21.0,-18.0
+periodic_steps4000000,periodic,4000000,31249,checkpoints/periodic_steps4000000.pt,-18.2,0.7888106377466155,-19.0,-17.0
+periodic_steps4500032,periodic,4500032,35155,checkpoints/periodic_steps4500032.pt,5.2,13.147031773158702,-20.0,18.0
+final_steps5000192,final,5000192,39061,checkpoints/final_steps5000192.pt,8.9,9.938142012804338,-12.0,21.0

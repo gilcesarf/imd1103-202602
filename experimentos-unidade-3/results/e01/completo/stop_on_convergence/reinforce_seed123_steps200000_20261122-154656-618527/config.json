@@ -1,0 +1,11 @@
+{
+  "experiment": "E01",
+  "algorithm": "reinforce",
+  "environment": "CartPole-v1",
+  "seed": 123,
+  "max_training_steps": 200000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "reinforce_evaluation_mode": "stochastic"
+}

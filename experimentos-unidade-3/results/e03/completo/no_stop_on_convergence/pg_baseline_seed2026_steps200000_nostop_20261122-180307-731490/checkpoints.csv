@@ -1,0 +1,5 @@
+checkpoint_id,checkpoint_type,training_steps,gradient_updates,model_path,evaluation_reward_mean,evaluation_reward_std,evaluation_reward_min,evaluation_reward_max
+periodic_steps50000,periodic,50000,6248,checkpoints/periodic_steps50000.pt,134.4,10.772284124695092,117.0,153.0
+periodic_steps100000,periodic,100000,12498,checkpoints/periodic_steps100000.pt,179.65,10.965376130539733,159.0,199.0
+periodic_steps150000,periodic,150000,18748,checkpoints/periodic_steps150000.pt,193.3,20.113101255282913,154.0,231.0
+final_steps200000,final,200000,24998,checkpoints/final_steps200000.pt,73.2,34.6571174432278,20.0,109.0

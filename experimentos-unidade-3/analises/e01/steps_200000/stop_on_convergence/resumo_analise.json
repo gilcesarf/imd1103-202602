@@ -1,0 +1,99 @@
+{
+  "experimento": "E01",
+  "ambiente": "CartPole-v1",
+  "criterio_selecao": "config.max_training_steps == 200000 e config.evaluation_episodes == 20",
+  "pasta_origem": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/results/e01/completo",
+  "pasta_destino": "/Users/gilcesarf/git/repositories/imd/imd1103-202602/experimentos-unidade-3/analises/e01/steps_200000",
+  "sementes": [
+    42,
+    123,
+    2026
+  ],
+  "limite_interacoes": 200000,
+  "limiar_media_movel": 450.0,
+  "episodios_avaliacao_por_semente": 20,
+  "execucoes": [
+    {
+      "algoritmo": "dqn",
+      "semente": 42,
+      "diretorio": "dqn_seed42_steps200000_20261122-154528-041840",
+      "passos_executados": 200000,
+      "convergiu": false,
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "dqn",
+      "semente": 123,
+      "diretorio": "dqn_seed123_steps200000_20261122-154638-929384",
+      "passos_executados": 52780,
+      "convergiu": true,
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "dqn",
+      "semente": 2026,
+      "diretorio": "dqn_seed2026_steps200000_20261122-154659-230817",
+      "passos_executados": 200000,
+      "convergiu": false,
+      "politica_avaliacao": "greedy_q"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 42,
+      "diretorio": "reinforce_seed42_steps200000_20261122-154635-470794",
+      "passos_executados": 96822,
+      "convergiu": true,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 123,
+      "diretorio": "reinforce_seed123_steps200000_20261122-154656-618527",
+      "passos_executados": 71128,
+      "convergiu": true,
+      "politica_avaliacao": "stochastic"
+    },
+    {
+      "algoritmo": "reinforce",
+      "semente": 2026,
+      "diretorio": "reinforce_seed2026_steps200000_20261122-154807-472606",
+      "passos_executados": 104957,
+      "convergiu": true,
+      "politica_avaliacao": "stochastic"
+    }
+  ],
+  "resumo_algoritmos": [
+    {
+      "algoritmo": "DQN",
+      "quantidade_sementes": 3,
+      "convergencias": 1,
+      "taxa_convergencia": 0.3333333333333333,
+      "media_recompensa_avaliacao_por_semente": 337.8833333333333,
+      "dp_recompensa_avaliacao_entre_sementes": 73.63532327173783,
+      "media_passos_convergencia_apenas_convergidos": 52780,
+      "avaliacoes_ge450_total": 13,
+      "avaliacoes_eq500_total": 6,
+      "episodios_avaliacao_total": 60
+    },
+    {
+      "algoritmo": "REINFORCE",
+      "quantidade_sementes": 3,
+      "convergencias": 3,
+      "taxa_convergencia": 1.0,
+      "media_recompensa_avaliacao_por_semente": 461.51666666666665,
+      "dp_recompensa_avaliacao_entre_sementes": 45.48093923099359,
+      "media_passos_convergencia_apenas_convergidos": 90969,
+      "avaliacoes_ge450_total": 49,
+      "avaliacoes_eq500_total": 46,
+      "episodios_avaliacao_total": 60
+    }
+  ],
+  "notas": [
+    "Somente execucoes cujo orcamento configurado foi 200000 foram utilizadas.",
+    "Execucoes convergidas podem terminar antes do limite de 200000 passos.",
+    "O desvio padrao dos 20 episodios de avaliacao e amostral (n-1).",
+    "O desvio padrao entre sementes e calculado entre as medias de avaliacao por semente.",
+    "Na comparacao de estabilidade, REINFORCE parou na convergencia e DQN pode ter treinado mais.",
+    "Os dados do treinamento e avaliacao sao reexportados sem alterar os arquivos de origem."
+  ]
+}

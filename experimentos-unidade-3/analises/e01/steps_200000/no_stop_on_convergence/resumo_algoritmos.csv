@@ -1,0 +1,3 @@
+algoritmo,quantidade_sementes,convergencias,taxa_convergencia,media_recompensa_avaliacao_por_semente,dp_recompensa_avaliacao_entre_sementes,media_passos_convergencia_apenas_convergidos,media_passos_primeira_convergencia_apenas_convergidos,avaliacoes_ge450_total,avaliacoes_eq500_total,episodios_avaliacao_total
+DQN,3,1,0.3333333333333333,337.7166666666667,73.50619588397521,52780,52780,14,6,60
+REINFORCE,3,3,1.0,438.18333333333334,107.06960742121609,90969,90969,40,40,60

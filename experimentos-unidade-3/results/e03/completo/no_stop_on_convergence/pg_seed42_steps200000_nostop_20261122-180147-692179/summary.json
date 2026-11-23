@@ -1,0 +1,96 @@
+{
+  "experiment": "E03",
+  "algorithm": "pg",
+  "environment": "CartPole-v1",
+  "seed": 42,
+  "max_training_steps": 200000,
+  "stop_on_convergence": false,
+  "evaluation_interval_steps": 50000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "gradient_diagnostic_every_updates": 200,
+  "gradient_temporal_window_updates": 50,
+  "evaluation_seed_base": 100000,
+  "reinforce_evaluation_mode": "stochastic",
+  "baseline": "none",
+  "stop_reason": "step_budget",
+  "converged": false,
+  "convergence": null,
+  "training_steps": 200000,
+  "episodes_completed": 1672,
+  "gradient_updates": 24998,
+  "training_reward_mean_last_100": 60.42,
+  "training_reward_max": 500.0,
+  "training_elapsed_seconds": 15.997,
+  "evaluation_elapsed_seconds": 0.17,
+  "checkpoint_evaluations_elapsed_seconds": 0.169,
+  "evaluation": {
+    "episodes": 20,
+    "policy": "stochastic",
+    "seed_base": 100000,
+    "reward_mean": 93.55,
+    "reward_std": 22.806912617842308,
+    "reward_min": 29.0,
+    "reward_max": 117.0,
+    "episode_length_mean": 93.55
+  },
+  "checkpoint_evaluations": [
+    {
+      "checkpoint_id": "periodic_steps50000",
+      "checkpoint_type": "periodic",
+      "training_steps": 50000,
+      "gradient_updates": 6248,
+      "model_path": "checkpoints/periodic_steps50000.pt",
+      "evaluation_reward_mean": 83.55,
+      "evaluation_reward_std": 24.709842488155882,
+      "evaluation_reward_min": 24.0,
+      "evaluation_reward_max": 113.0
+    },
+    {
+      "checkpoint_id": "periodic_steps100000",
+      "checkpoint_type": "periodic",
+      "training_steps": 100000,
+      "gradient_updates": 12498,
+      "model_path": "checkpoints/periodic_steps100000.pt",
+      "evaluation_reward_mean": 130.45,
+      "evaluation_reward_std": 15.357065920422771,
+      "evaluation_reward_min": 106.0,
+      "evaluation_reward_max": 172.0
+    },
+    {
+      "checkpoint_id": "final_steps200000",
+      "checkpoint_type": "final",
+      "training_steps": 200000,
+      "gradient_updates": 24998,
+      "model_path": "checkpoints/final_steps200000.pt",
+      "evaluation_reward_mean": 93.55,
+      "evaluation_reward_std": 22.806912617842308,
+      "evaluation_reward_min": 29.0,
+      "evaluation_reward_max": 117.0
+    }
+  ],
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.5.0",
+    "gymnasium": "0.29.1",
+    "ptan": "unknown",
+    "numpy": "1.26.4"
+  },
+  "reference": "Chapter12/01_cartpole_pg.py",
+  "details": {
+    "train_params": {
+      "GAMMA": 0.99,
+      "LEARNING_RATE": 0.001,
+      "ENTROPY_BETA": 0.01,
+      "BATCH_SIZE": 8,
+      "REWARD_STEPS": 10
+    },
+    "baseline": "none",
+    "gradient_diagnostic_every_updates": 200,
+    "gradient_temporal_window_updates": 50,
+    "pending_minibatch_samples": 6,
+    "experience_samples": 199990,
+    "note": "Minibatch incompleto ao fim do orcamento nao gera atualizacao."
+  }
+}

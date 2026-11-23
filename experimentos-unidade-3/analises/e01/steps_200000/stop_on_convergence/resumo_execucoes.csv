@@ -1,0 +1,7 @@
+algoritmo,semente,convergiu,motivo_parada,passos_treinamento,episodios_treinamento,atualizacoes_gradiente,tempo_treino_segundos,recompensa_media_treino_ultimos100,recompensa_media_avaliacao,desvio_padrao_avaliacao,avaliacoes_ge450,avaliacoes_eq500,pico_media_movel,passos_pico,menor_media_apos_pico,passos_menor_media_apos_pico,tempo_por_1000_passos
+DQN,42,False,step_budget,200000,987,199992,67.34,356.95,253.0,14.70409896307113,0,0,425.9,79158,17.57,117725,0.3367
+DQN,123,True,convergence,52780,234,52772,17.558,451.05,376.05,77.00955169738089,5,1,451.05,52780,451.05,52780,0.33266388783630163
+DQN,2026,False,step_budget,200000,1617,199992,68.105,256.04,384.6,106.87986369357839,8,5,323.38,139859,9.32,147816,0.340525
+REINFORCE,42,True,convergence,96822,395,98,3.196,450.18,487.65,55.23087904424481,19,19,450.18,96822,450.18,96822,0.03300902687405755
+REINFORCE,123,True,convergence,71128,359,89,2.353,452.1,487.9,54.11284505549491,19,19,452.1,71128,452.1,71128,0.03308120571364301
+REINFORCE,2026,True,convergence,104957,527,131,3.454,450.47,409.0,107.83857331556665,11,8,450.47,104957,450.47,104957,0.03290871499757044

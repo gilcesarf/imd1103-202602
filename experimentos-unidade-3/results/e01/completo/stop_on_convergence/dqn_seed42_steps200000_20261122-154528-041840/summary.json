@@ -1,0 +1,52 @@
+{
+  "experiment": "E01",
+  "algorithm": "dqn",
+  "environment": "CartPole-v1",
+  "seed": 42,
+  "max_training_steps": 200000,
+  "min_episodes_for_convergence": 100,
+  "convergence_mean_reward": 450.0,
+  "evaluation_episodes": 20,
+  "reinforce_evaluation_mode": null,
+  "stop_reason": "step_budget",
+  "converged": false,
+  "convergence": null,
+  "training_steps": 200000,
+  "episodes_completed": 987,
+  "gradient_updates": 199992,
+  "training_reward_mean_last_100": 356.95,
+  "training_reward_max": 500.0,
+  "training_elapsed_seconds": 67.34,
+  "evaluation_elapsed_seconds": 0.087,
+  "evaluation": {
+    "episodes": 20,
+    "policy": "greedy_q",
+    "seed_base": 100000,
+    "reward_mean": 253.0,
+    "reward_std": 14.70409896307113,
+    "reward_min": 233.0,
+    "reward_max": 280.0,
+    "episode_length_mean": 253.0
+  },
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.5.0",
+    "gymnasium": "0.29.1",
+    "ptan": "unknown",
+    "numpy": "1.26.4"
+  },
+  "reference": "Chapter11/01_cartpole_dqn.py",
+  "details": {
+    "epsilon_final": 0.02,
+    "train_params": {
+      "GAMMA": 0.99,
+      "LEARNING_RATE": 0.002,
+      "BATCH_SIZE": 8,
+      "EPSILON_START": 1.0,
+      "EPSILON_STOP": 0.02,
+      "EPSILON_STEPS": 5000,
+      "REPLAY_BUFFER": 50000
+    },
+    "pending_partial_episode": true
+  }
+}

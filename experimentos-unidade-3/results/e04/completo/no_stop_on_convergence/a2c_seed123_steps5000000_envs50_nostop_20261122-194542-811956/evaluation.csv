@@ -1,0 +1,11 @@
+episode,seed,reward,steps,terminated,truncated
+1,404000,18.0,2446,True,False
+2,404001,6.0,4267,True,False
+3,404002,-9.0,3600,True,False
+4,404003,17.0,2601,True,False
+5,404004,19.0,2349,True,False
+6,404005,19.0,2289,True,False
+7,404006,10.0,3869,True,False
+8,404007,18.0,2411,True,False
+9,404008,-3.0,4519,True,False
+10,404009,21.0,1975,True,False
